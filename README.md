@@ -5,7 +5,7 @@
 
 Current branch:
 
-*  `3.10.1`, `latest`
+*  `5.10.1`, `latest`
 
 For previous versions or newest releases see other branches.
 
@@ -17,7 +17,7 @@ Dockerfiles to build [Bamboo](https://www.atlassian.com/software/bamboo/)
 
 ### Version
 
-* Version: `3.10.1`
+* Version: `5.10.1`
 
 
 ## Installation
@@ -59,29 +59,29 @@ No special users
 Next ports are exposed
 
 * `8085/tcp` - Bamboo default web interface
-
+* `54663/tcp` - Bamboo broker
 
 
 ### Entrypoint
 
-You can execute Splunk commands by using
+We use puppet as the default entry point to manage the environment
 
-```
-docker exec splunk entrypoint.sh splunk version
-```
-
-*Splunk is launched in background. Which means that when Splunk restarts (after some configuration changes) - the container will not be affected.*
+*Bamboo is launched in background. Which means that is possible to restart bamboo without restarting the container.*
 
 ### Hostname
 
-It is recommended to specify `hostname` for this image, so if you will recreate Splunk instance you will keep the same hostname.
+It is recommended to specify `hostname` for this image, so if you will recreate bamboo instance you will keep the same hostname.
 
 ### Basic configuration using Environment Variables
 
 > Some basic configurations are allowed to configure the system and make it easier to change at docker command line
 
-- `SPLUNK_ENABLE_DEPLOY_SERVER='true'` - enable deployment server on Indexer.
-    - Available: *splunk* image only.
+- FACTER_BAMBOO_VERSION "5.10.1.1"
+- FACTER_BAMBOO_INSTALLDIR "/opt/bamboo"
+- FACTER_BAMBOO_HOME "/opt/bamboo-home"
+- FACTER_BAMBOO_USER "bamboo"
+- FACTER_BAMBOO_GROUP "bamboo"
+- FACTER_BAMBOO_DOWNLOAD_URL "https://www.atlassian.com/software/bamboo"
 
 
 ## Upgrade from previous version
@@ -91,3 +91,12 @@ Upgrade example below
 ```
 TBD
 ```
+
+## Credits
+
+My thanks to the following
+
+- Every one who worked building docker
+- Github for the dvcs support
+- Puppet guys for the great tool
+- Josh Beard for the [great puppet module](https://forge.puppetlabs.com/joshbeard/bamboo) witch made this image so easier to create
