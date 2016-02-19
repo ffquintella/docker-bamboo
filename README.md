@@ -76,12 +76,17 @@ It is recommended to specify `hostname` for this image, so if you will recreate 
 
 > Some basic configurations are allowed to configure the system and make it easier to change at docker command line
 
-- FACTER_BAMBOO_VERSION "5.10.1.1"
-- FACTER_BAMBOO_INSTALLDIR "/opt/bamboo"
-- FACTER_BAMBOO_HOME "/opt/bamboo-home"
-- FACTER_BAMBOO_USER "bamboo"
-- FACTER_BAMBOO_GROUP "bamboo"
-- FACTER_BAMBOO_DOWNLOAD_URL "https://www.atlassian.com/software/bamboo"
+- FACTER_BAMBOO_VERSION "5.10.1.1" - Bamboo version to be installed
+- FACTER_BAMBOO_INSTALLDIR "/opt/bamboo" - Bamboo install dir
+- FACTER_BAMBOO_HOME "/opt/bamboo-home" - Bamboo home
+- FACTER_BAMBOO_DOWNLOAD_URL "https://www.atlassian.com/software/bamboo" - Url used to download bamboo in container creation
+- JAVA_HOME "/opt/java_home" - Java home (we use oracle jdk 1.8.11)
+- FACTER_BAMBOO_PROXY "false" - If bamboo is behind a proxy
+- FACTER_BAMBOO_PROXY_SCHEME "https"
+- FACTER_BAMBOO_PROXY_NAME "bamboo.local"
+- FACTER_BAMBOO_PROXY_PORT "443"
+- FACTER_JAVA_HOME $JAVA_HOME - Just to be acessible in puppet
+
 
 
 ## Upgrade from previous version
