@@ -26,8 +26,8 @@ if $bamboo_proxy  != 'false' {
     context_path => $bamboo_context,
   }
 }
-# Cleaning unused packages to decrease image size
+# Starting bamboo
 exec {'Starting Bamboo':
   path  => '/bin:/sbin:/usr/bin:/usr/sbin',
   command => "echo \"Starting Docker ...\"; $bamboo_installdir/atlassian-bamboo-$bamboo_version/bin/start-bamboo.sh; "
-}
+} 
