@@ -2,7 +2,9 @@ package {'sudo':
   ensure => present
 }
 
-
+package{'zip':
+  ensure => present
+}
 
 class { 'jdk_oracle':} ->
 
