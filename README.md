@@ -5,7 +5,7 @@
 
 Current branch:
 
-*  `5.10.1`, `latest`
+*  `5.10.1`, `5.10.3`, `latest`
 
 For previous versions or newest releases see other branches.
 
@@ -17,6 +17,7 @@ Dockerfiles to build [Bamboo](https://www.atlassian.com/software/bamboo/)
 
 ### Version
 
+* Version: `5.10.3` - Latest
 * Version: `5.10.1`
 
 
