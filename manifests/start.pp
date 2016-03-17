@@ -33,7 +33,7 @@ $packs.each |String $value| {
   package{$value:
     ensure => present
   }
-} ->
+} 
 
 # Starting bamboo
 exec {'Starting Bamboo':

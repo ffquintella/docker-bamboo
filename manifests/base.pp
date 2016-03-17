@@ -4,7 +4,17 @@ package {'sudo':
 package{'zip':
   ensure => present
 }
-   
+
+file{ '/etc/yum.repos.d/epel.repo':
+  ensure => present,
+  content => '[epel]
+name=Extra Packages for Enterprise Linux 7 - $basearch
+#baseurl=http://download.fedoraproject.org/pub/epel/7/$basearch
+mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-7&arch=$basearch
+failovermethod=priority
+enabled=1'
+}
+
 class { 'jdk_oracle':} ->
 
 if $bamboo_proxy  != 'false' {
@@ -32,7 +42,11 @@ class { 'bamboo':
   }
 }
 
-
+# Full update
+exec {'Full update':
+  path  => '/bin:/sbin:/usr/bin:/usr/sbin',
+  command => 'yum -y update'
+} ->
 # Cleaning unused packages to decrease image size
 exec {'erase installer':
   path  => '/bin:/sbin:/usr/bin:/usr/sbin',
