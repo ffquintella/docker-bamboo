@@ -26,8 +26,17 @@ if $bamboo_proxy  != 'false' {
     context_path => $bamboo_context,
   }
 }
+
+$packs = split($extra_packs, ";")
+
+$packs.each |String $value| {
+  package{$value:
+    ensure => present
+  }
+} ->
+
 # Starting bamboo
 exec {'Starting Bamboo':
   path  => '/bin:/sbin:/usr/bin:/usr/sbin',
-  command => "echo \"Starting Docker ...\"; $bamboo_installdir/atlassian-bamboo-$bamboo_version/bin/start-bamboo.sh; "
-} 
+  command => "echo \"Starting Bamboo Server ...\"; $bamboo_installdir/atlassian-bamboo-$bamboo_version/bin/start-bamboo.sh; "
+}

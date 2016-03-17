@@ -2,7 +2,7 @@ FROM ffquintella/docker-puppet:latest
 
 MAINTAINER Felipe Quintella <docker-bamboo@felipe.quintella.email>
 
-LABEL version="5.10.1.1"
+LABEL version="5.10.3"
 LABEL description="This image contais the bamboo application to be used \
 as a server."
 
@@ -11,7 +11,7 @@ as a server."
 
 ENV JAVA_HOME "/opt/java_home"
 
-ENV FACTER_BAMBOO_VERSION "5.10.1.1"
+ENV FACTER_BAMBOO_VERSION "5.10.3"
 ENV FACTER_BAMBOO_INSTALLDIR "/opt/bamboo"
 ENV FACTER_BAMBOO_HOME "/opt/bamboo-home"
 ENV FACTER_BAMBOO_DOWNLOAD_URL "https://www.atlassian.com/software/bamboo"
@@ -21,6 +21,7 @@ ENV FACTER_BAMBOO_PROXY_SCHEME "https"
 ENV FACTER_BAMBOO_PROXY_NAME "bamboo.local"
 ENV FACTER_BAMBOO_PROXY_PORT "443"
 ENV FACTER_JAVA_HOME $JAVA_HOME
+ENV FACTER_EXTRA_PACKS ""
 
 # Puppet stuff all the instalation is donne by puppet
 # Just after it we clean up everthing so the end image isn't too big
