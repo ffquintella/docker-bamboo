@@ -87,7 +87,7 @@ It is recommended to specify `hostname` for this image, so if you will recreate 
 - FACTER_BAMBOO_PROXY_NAME "bamboo.local"
 - FACTER_BAMBOO_PROXY_PORT "443"
 - FACTER_JAVA_HOME $JAVA_HOME - Just to be acessible in puppet
-
+- FACTER_EXTRA_PACKS "" - Packages to be installed at runtime (must be centos7 packages on the defaul repos or epel)
 
 
 ## Upgrade from previous version
