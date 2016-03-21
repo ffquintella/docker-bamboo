@@ -46,9 +46,7 @@ Not written yet
 
 ### Data Store
 
-This image has two data volumes
-
-* ` xxx ` - xxxx
+This image doesn't use data volumes by default but you should configure /opt/bamboo-home to point to a data volume or to point to a folder in the local disk
 
 
 ### User
@@ -87,16 +85,17 @@ It is recommended to specify `hostname` for this image, so if you will recreate 
 - FACTER_BAMBOO_PROXY_NAME "bamboo.local"
 - FACTER_BAMBOO_PROXY_PORT "443"
 - FACTER_JAVA_HOME $JAVA_HOME - Just to be acessible in puppet
+- FACTER_PRE_RUN_CMD "" - Command to be executed just before starting bamboo
 - FACTER_EXTRA_PACKS "" - Packages to be installed at runtime (must be centos7 packages on the defaul repos or epel)
 
 
 ## Upgrade from previous version
 
-Upgrade example below
+Basically stop your running container;
 
-```
-TBD
-```
+Docker pull latest version
+
+Start a new instance with the new image (backup your data dir)
 
 ## Credits
 
