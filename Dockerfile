@@ -9,6 +9,10 @@ as a server."
 #https://www.atlassian.com/software/bamboo/downloads/binary/atlassian-bamboo-5.10.1.1.tar.gz
 #https://www.atlassian.com/software/bamboo/downloads/binary/atlassian-bamboo-5.10.1.tar.gz
 
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US.UTF-8
+ENV LC_ALL=en_US.UTF-8
+
 ENV JAVA_HOME "/opt/java_home"
 
 ENV FACTER_BAMBOO_VERSION "5.10.3"
