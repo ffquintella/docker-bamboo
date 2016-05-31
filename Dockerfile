@@ -2,7 +2,7 @@ FROM ffquintella/docker-puppet:latest
 
 MAINTAINER Felipe Quintella <docker-bamboo@felipe.quintella.email>
 
-LABEL version="5.10.3"
+LABEL version="5.12.1"
 LABEL description="This image contais the bamboo application to be used \
 as a server."
 
@@ -15,7 +15,7 @@ ENV LC_ALL=en_US.UTF-8
 
 ENV JAVA_HOME "/opt/java_home"
 
-ENV FACTER_BAMBOO_VERSION "5.10.3"
+ENV FACTER_BAMBOO_VERSION "5.12.1"
 ENV FACTER_BAMBOO_INSTALLDIR "/opt/bamboo"
 ENV FACTER_BAMBOO_HOME "/opt/bamboo-home"
 ENV FACTER_BAMBOO_DOWNLOAD_URL "https://www.atlassian.com/software/bamboo"
