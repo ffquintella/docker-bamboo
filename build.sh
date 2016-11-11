@@ -1,1 +1,1 @@
-docker build -t ffquintella/docker-bamboo:5.12.1 .
+docker build -t ffquintella/docker-bamboo:latest .

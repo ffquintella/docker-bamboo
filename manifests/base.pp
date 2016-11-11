@@ -16,7 +16,13 @@ enabled=1
 gpgcheck=0'
 }
 
-class { 'jdk_oracle':} ->
+class { 'jdk_oracle':
+  version     => $java_version,
+  install_dir => $java_home,
+  version_update => $java_version_update,
+  version_build  => $java_version_build,
+  package     => 'server-jre'
+} ->
 
 if $bamboo_proxy  != 'false' {
 class { 'bamboo':
