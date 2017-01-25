@@ -5,7 +5,7 @@
 
 Current branch:
 
-* '5.12.1.2', '5.12.1'
+* '5.12.5.1','5.12.1.2', '5.12.1'
 * `5.10.1`, `5.10.3`, `5.12.1`
 
 For previous versions or newest releases see other branches.
@@ -18,7 +18,8 @@ Dockerfiles to build [Bamboo](https://www.atlassian.com/software/bamboo/)
 
 ### Version
 
-* `5.12.1.2` - Latest: Java update to 8 - 121
+* `5.12.5.1` - Latest: Upgrade to 5.12.5
+* `5.12.1.2` - Java update to 8 - 121
 * `5.12.1`
 * `5.10.3`
 * `5.10.1`
