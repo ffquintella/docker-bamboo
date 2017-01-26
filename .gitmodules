@@ -7,3 +7,6 @@
 [submodule "modules/alternatives"]
 	path = modules/alternatives
 	url = https://github.com/voxpupuli/puppet-alternatives.git
+[submodule "modules/jdk_oracle"]
+	path = modules/jdk_oracle
+	url = https://ffquintella@github.com/ffquintella/puppet-jdk_oracle.git
