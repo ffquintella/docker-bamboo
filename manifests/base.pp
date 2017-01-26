@@ -28,6 +28,7 @@ class { 'jdk_oracle':
   install_dir    => $java_install,
   version_update => $java_version_update,
   version_build  => $java_version_build,
+  hash           => $java_hash,
   package        => 'server-jre'
 } ->
 
