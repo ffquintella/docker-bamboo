@@ -9,4 +9,4 @@
 	url = https://github.com/voxpupuli/puppet-alternatives.git
 [submodule "modules/jdk_oracle"]
 	path = modules/jdk_oracle
-	url = https://ffquintella@github.com/ffquintella/puppet-jdk_oracle.git
+	url = https://ffquintella@github.com/tylerwalts/puppet-jdk_oracle.git

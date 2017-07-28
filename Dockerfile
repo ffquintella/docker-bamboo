@@ -2,7 +2,7 @@ FROM ffquintella/docker-puppet:latest
 
 MAINTAINER Felipe Quintella <docker-bamboo@felipe.quintella.email>
 
-LABEL version="5.12.5"
+LABEL version="6.1.0.1"
 LABEL description="This image contais the bamboo application to be used \
 as a server."
 
@@ -13,14 +13,16 @@ ENV LC_ALL=en_US.UTF-8
 
 ENV JAVA_HOME "/opt/java_home/current"
 
-ENV FACTER_JAVA_HOME $JAVA_HOME
-ENV FACTER_JAVA_INSTALL "/opt/java_home"
+ENV FACTER_JAVA_HOME "/opt/java_home"
 ENV FACTER_JAVA_VERSION "8"
-ENV FACTER_JAVA_VERSION_UPDATE "121"
-ENV FACTER_JAVA_VERSION_BUILD "13"
-ENV FACTER_JAVA_HASH "e9e7ea248e2c4826b92b3f075a80e441"
+ENV FACTER_JAVA_VERSION_UPDATE "144"
+ENV FACTER_JAVA_VERSION_BUILD "01"
+ENV FACTER_JAVA_VERSION_HASH "090f390dda5b47b9b721c7dfaa008135"
 
-ENV FACTER_BAMBOO_VERSION "5.12.5"
+ENV JVM_MINIMUM_MEMORY 512m
+ENV JVM_MAXIMUM_MEMORY 4096m
+
+ENV FACTER_BAMBOO_VERSION "6.1.0"
 ENV FACTER_BAMBOO_INSTALLDIR "/opt/bamboo"
 ENV FACTER_BAMBOO_HOME "/opt/bamboo-home"
 ENV FACTER_BAMBOO_DOWNLOAD_URL "https://www.atlassian.com/software/bamboo"

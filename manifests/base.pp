@@ -24,13 +24,14 @@ gpgcheck=0'
 }
 
 class { 'jdk_oracle':
-  version        => $java_version,
-  install_dir    => $java_install,
+  version     => $java_version,
+  install_dir => $java_home,
   version_update => $java_version_update,
   version_build  => $java_version_build,
-  hash           => $java_hash,
-  package        => 'server-jre'
+  version_hash  => $java_version_hash,
+  package     => 'server-jre'
 } ->
+
 
 file {'/opt/java_home/current':
   ensure => link,
