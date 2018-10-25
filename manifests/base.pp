@@ -23,6 +23,8 @@ enabled=1
 gpgcheck=0'
 }
 
+$bamboo_dowload_url = 'https://www.atlassian.com/software/bamboo/downloads/binary'
+
 class { 'jdk_oracle':
   version     => $java_version,
   install_dir => $java_home,
@@ -37,6 +39,8 @@ file {'/opt/java_home/current':
   ensure => link,
   target => "/opt/java_home/jdk1.${java_version}.0_${java_version_update}/jre",
 } ->
+
+
 
 if $bamboo_proxy  != 'false' {
 class { 'bamboo':

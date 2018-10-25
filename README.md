@@ -8,6 +8,7 @@
 
 Current branch:
 
+* '6.7.1.1'
 * '6.5.0.1'
 * '6.1.0.1'
 * '5.12.5.2','5.12.5.1','5.12.1.2', '5.12.1'
@@ -23,7 +24,8 @@ Dockerfiles to build [Bamboo](https://www.atlassian.com/software/bamboo/)
 
 ### Version
 
-* `6.5.0.1` - Latest: Upgrade to 6.5.0
+* `6.7.1.1` - Latest: Upgrade to 6.7.1 - java 192
+* `6.5.0.1` -  Upgrade to 6.5.0
 * `6.1.0.1` - Upgrade to 6.1.0 and java 144
 * `5.12.5.2` - FIX Java installation
 * `5.12.5.1` - Upgrade to 5.12.5
